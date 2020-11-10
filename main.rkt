@@ -1,5 +1,6 @@
 #lang codespells
 
+(require rocks/mod-info)
 (require 2htdp/image)
 
 ;TODO: Make a better rune.  Maybe need a general solution for
@@ -11,37 +12,37 @@
 (define-classic-rune (gnarly-rock [version 1]) ;Note for docs: Only version = 1 works, but there are many rocks in the Mod that can be exposed as BPs
   #:background "brown"
   #:foreground noun-project-rock
-  (spawn-this-mod-blueprint (~a "GnarlyRock" version)))
+  (spawn-mod-blueprint pak-folder mod-name (~a "GnarlyRock" version)))
 
 (define-classic-rune (forest-rock [version 1]) ;Note for docs: Only version = 1 works, but there are many rocks in the Mod that can be exposed as BPs
   #:background "brown"
   #:foreground noun-project-rock
-  (spawn-this-mod-blueprint (~a "ForestRock" version)))
+  (spawn-mod-blueprint pak-folder mod-name (~a "ForestRock" version)))
 
 (define-classic-rune (black-rock [version 1]) ;Note for docs: Only version = 1 works, but there are many rocks in the Mod that can be exposed as BPs
   #:background "brown"
   #:foreground noun-project-rock
-  (spawn-this-mod-blueprint (~a "BlackRock" version)))
+  (spawn-mod-blueprint pak-folder mod-name (~a "BlackRock" version)))
 
 (define-classic-rune (coal [version 1]) ;Note for docs: Only version = 1 works, but there are many rocks in the Mod that can be exposed as BPs
   #:background "brown"
   #:foreground noun-project-rock
-  (spawn-this-mod-blueprint (~a "Coal" version)))
+  (spawn-mod-blueprint pak-folder mod-name (~a "Coal" version)))
 
 
-(define-classic-rune (metalic-rock [version 1]) ;Note for docs: Only version = 1 works, but there are many rocks in the Mod that can be exposed as BPs
+(define-classic-rune (metallic-rock [version 1]) ;Note for docs: Only version = 1 works, but there are many rocks in the Mod that can be exposed as BPs
   #:background "brown"
   #:foreground noun-project-rock
-  (spawn-this-mod-blueprint (~a "MetalicRock" version)))
+  (spawn-mod-blueprint pak-folder mod-name (~a "MetalicRock" version)))
 
 (define-classic-rune (floor-mossed-stone [version 1]) ;Note for docs: Only version = 1 works, but there are many rocks in the Mod that can be exposed as BPs
   #:background "brown"
   #:foreground noun-project-rock
-  (spawn-this-mod-blueprint (~a "FloorMossedStone" version)))
+  (spawn-mod-blueprint pak-folder mod-name (~a "FloorMossedStone" version)))
 
-(define-classic-rune-lang my-mod-lang
+(define-classic-rune-lang my-mod-lang #:eval-from main.rkt
   (gnarly-rock forest-rock black-rock coal
-               metalic-rock
+               metallic-rock
                floor-mossed-stone))
 
 (module+ main

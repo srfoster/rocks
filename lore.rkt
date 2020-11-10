@@ -6,6 +6,7 @@
 (provide name
          description
          runes
+         preview-image
          )
 
 (define (name)
@@ -19,42 +20,39 @@
 
 (define (runes)
   (list
-    @md{
-    ## Gnarly Rock Rune
-
-    @(gnarly-rock-rune)}
-
-    @md{
-    ## Forest Rock Rune
-
-    @(forest-rock-rune)}
-
-    @md{ 
-    ## Black Rock Rune
-
-    @(black-rock-rune)}
-    
-    @md{ 
-    ## Coal Rune
-
-    @(coal-rune)}
-    
-    @md{ 
-    ## Metallic Rock Rune
-
-    @(metallic-rock-rune)}
-    
-    @md{ 
-    ## Floor Mossed Stone Rune
-
-    @(floor-mossed-stone-rune)}
-
+    (list
+     "Gnarly Rock Rune"
+     (gnarly-rock-rune)
+     "" 
+     )
+    (list
+     "Forest Rock Rune"
+     (forest-rock-rune)
+     "" 
+     )
+    (list
+     "Black Rock Rune"
+     (black-rock-rune)
+     "" 
+     )
+    (list
+     "Coal Rune"
+     (coal-rune)
+     "" 
+     )
+    (list
+     "Metallic Rock Rune"
+     (metallic-rock-rune)
+     "" 
+     )
+    (list
+     "Floor Mossed Stone Rune"
+     (floor-mossed-stone-rune)
+     "" 
+     )
     )
   )
 
-#;
-(module+ main
-	 (render #:to "out" 
-		 (list
-		   (bootstrap-files)
-		   (lore))))
+(define (preview-image)
+  (black-rock-rune)
+  )

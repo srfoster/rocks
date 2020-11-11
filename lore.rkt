@@ -1,58 +1,47 @@
 #lang at-exp racket
 
-(require rocks/main
-	 website-js)
+(require rocks
+	 codespells/lore)
 
-(provide name
-         description
-         runes
-         preview-image
-         )
-
-(define (name)
-  "Rocks"
-  )
-
-(define (description)
+(define-rune-collection-lore 
+  #:name "Conjurings of Rock"
+  #:description 
   @md{
     The @b{Rocks} Rune Collection contains the rocks of our Wizard Fathers. Use them wisely.
-  })
-
-(define (runes)
+  }
+  #:rune-lores
   (list
-    (list
-     "Gnarly Rock Rune"
-     (gnarly-rock-rune)
-     "" 
+    (rune-lore
+     #:name        "Gnarly Rock Rune"
+     #:rune        (gnarly-rock-rune)
+     #:description "" 
      )
-    (list
-     "Forest Rock Rune"
-     (forest-rock-rune)
-     "" 
+    (rune-lore
+     #:name        "Forest Rock Rune"
+     #:rune        (forest-rock-rune)
+     #:description "" 
      )
-    (list
-     "Black Rock Rune"
-     (black-rock-rune)
-     "" 
+    (rune-lore
+     #:name        "Black Rock Rune"
+     #:rune        (black-rock-rune)
+     #:description "" 
      )
-    (list
-     "Coal Rune"
-     (coal-rune)
-     "" 
+    (rune-lore
+     #:name        "Coal Rune"
+     #:rune        (coal-rune)
+     #:description "" 
      )
-    (list
-     "Metallic Rock Rune"
-     (metallic-rock-rune)
-     "" 
+    (rune-lore
+     #:name        "Metallic Rock Rune"
+     #:rune        (metallic-rock-rune)
+     #:description "" 
      )
-    (list
-     "Floor Mossed Stone Rune"
-     (floor-mossed-stone-rune)
-     "" 
+    (rune-lore
+     #:name        "Floor Mossed Stone Rune"
+     #:rune        (floor-mossed-stone-rune)
+     #:description "" 
      )
     )
+  #:preview-image (black-rock-rune)
   )
 
-(define (preview-image)
-  (black-rock-rune)
-  )

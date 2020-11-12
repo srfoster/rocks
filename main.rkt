@@ -33,7 +33,8 @@
 (define-classic-rune (metallic-rock [version 1]) ;Note for docs: Only version = 1 works, but there are many rocks in the Mod that can be exposed as BPs
   #:background "brown"
   #:foreground noun-project-rock
-  (spawn-mod-blueprint pak-folder mod-name (~a "MetalicRock" version)))
+  ;Metalic is mispelled in the Unreal project
+  (spawn-mod-blueprint pak-folder mod-name (~a "MetalicSmallRock" version)))
 
 (define-classic-rune (floor-mossed-stone [version 1]) ;Note for docs: Only version = 1 works, but there are many rocks in the Mod that can be exposed as BPs
   #:background "brown"
@@ -51,6 +52,6 @@
 
 
   (once-upon-a-time
-   #:world (voxel-world) ;(demo-world)
+   #:world (arena-world) ;(demo-world)
    #:aether (demo-aether
              #:lang (my-mod-lang #:with-paren-runes? #t))))

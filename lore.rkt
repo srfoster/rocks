@@ -3,6 +3,10 @@
 (require rocks
 	 codespells/lore)
 
+(define-runtime-path preview-image
+                     "images/preview.png"
+                     )
+
 (define-rune-collection-lore 
   #:name "Conjurings of Rock"
   #:description 
@@ -71,6 +75,6 @@
      }
      )
     )
-  #:preview-image (black-rock-rune)
+  #:preview-image preview-image
   )
 

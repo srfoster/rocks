@@ -29,6 +29,11 @@
      This Rune references a gnarled river rock identical to one that 
      @b{Ulrich Stoneface} was said to have
      meditated on for two years, eating only fish that happened to swim close enough to catch.
+
+     @(rune-code-example
+	(my-mod-lang #:with-paren-runes? #t)
+	(gnarly-rock)
+	gnarly-rock-demo.mp4)
      }
      )
     (rune-lore
@@ -37,6 +42,12 @@
      #:description @md{
      This Rune references a forest rock that @b{Ulrich Stoneface} used as a landmark while
      navigating the @b{Endless Forests}. 
+
+
+     @(rune-code-example
+	(my-mod-lang #:with-paren-runes? #t)
+	(forest-rock)
+	forest-rock-demo.mp4)
      }
      )
     (rune-lore
@@ -45,6 +56,11 @@
      #:description @md{
      This Rune references a fragment of obsidian that @b{Ulrich Stoneface} kept for
      good luck after finding it at the edge of the entrance to the @b{Volcanic Underground.}
+
+     @(rune-code-example
+	(my-mod-lang #:with-paren-runes? #t)
+	(black-rock)
+	black-rock-demo.mp4)
      }
      )
     (rune-lore
@@ -54,6 +70,11 @@
      This Rune references the piece of coal that @b{Ulrich Stoneface} first managed to
      light on fire with magic -- his first test, as a boy, entering the 
      @b{Academy}.
+
+     @(rune-code-example
+	(my-mod-lang #:with-paren-runes? #t)
+	(coal)
+	coal-demo.mp4)
      }
      )
     (rune-lore
@@ -63,6 +84,11 @@
      This Rune references a fragment of metal that @b{Ulrich Stoneface} is said to
      have used to trick the @b{Blind Dragon of the Escarpments} into giving up its 
      trove of ancient books.
+
+     @(rune-code-example
+	(my-mod-lang #:with-paren-runes? #t)
+	(metallic-rock)
+	metallic-rock-demo.mp4)
      }
      )
     (rune-lore
@@ -72,6 +98,11 @@
      This Rune references a moss-covered stone that @b{Ulrich Stoneface} wished, for
      reasons unknown, to be used as his headstone.  For a thousand years, it sat
      at the base of his statue amidst @b{Seven Island Strongholds.}
+
+     @(rune-code-example
+	(my-mod-lang #:with-paren-runes? #t)
+	(floor-mossed-stone)
+	floor-mossed-stone-demo.mp4)
      }
      )
     )

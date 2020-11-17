@@ -33,7 +33,7 @@
      }
      )
     (rune-lore
-     #:name        "Forest Rock Rune"
+     #:name        "Forest Rock"
      #:rune        (forest-rock-rune)
      #:description @md{
      This Rune references a forest rock that @b{Ulrich Stoneface} used as a landmark while
@@ -47,7 +47,7 @@
      }
      )
     (rune-lore
-     #:name        "Black Rock Rune"
+     #:name        "Black Rock"
      #:rune        (black-rock-rune)
      #:description @md{
      This Rune references a fragment of obsidian that @b{Ulrich Stoneface} kept for
@@ -60,7 +60,7 @@
      }
      )
     (rune-lore
-     #:name        "Coal Rune"
+     #:name        "Coal"
      #:rune        (coal-rune)
      #:description @md{
      This Rune references the piece of coal that @b{Ulrich Stoneface} first managed to
@@ -74,7 +74,7 @@
      }
      )
     (rune-lore
-     #:name        "Metallic Rock Rune"
+     #:name        "Metallic Rock"
      #:rune        (metallic-rock-rune)
      #:description @md{
      This Rune references a fragment of metal that @b{Ulrich Stoneface} is said to
@@ -88,7 +88,7 @@
      }
      )
     (rune-lore
-     #:name        "Floor Mossed Stone Rune"
+     #:name        "Floor Mossed Stone"
      #:rune        (floor-mossed-stone-rune)
      #:description @md{
      This Rune references a moss-covered stone that @b{Ulrich Stoneface} wished, for

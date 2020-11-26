@@ -1,7 +1,14 @@
 #lang at-exp racket
 
-(require rocks
-	 codespells/lore)
+(require codespells/lore
+         (only-in codespells append-rune-langs
+                             require-mod))
+
+(require-mod hierarchy)
+(require-mod spawners)
+(require-mod fire-particles)
+(require-mod ice-particles)
+(require-mod rocks)
 
 (define-rune-collection-lore 
   #:name "Conjurings of Rock"
@@ -27,9 +34,22 @@
      meditated on for two years, eating only fish that happened to swim close enough to catch.
 
      @(rune-code-example
-	(my-mod-lang #:with-paren-runes? #t)
+	(rocks:my-mod-lang #:with-paren-runes? #t)
 	(gnarly-rock)
 	gnarly-rock-demo.mp4)
+
+     Combine with an @b{Illusions of Fire} rune to give your rocks a dramatic entrance!
+     
+     @(rune-code-example
+         (append-rune-langs
+           #:name #f 
+           (rocks:my-mod-lang)
+           (hierarchy:my-mod-lang)
+           (fire-particles:my-mod-lang #:with-paren-runes? #t))
+         (parentify 
+           gnarly-rock
+           explosion)
+         rock-with-explosion-demo.mp4) 
      }
      )
     (rune-lore
@@ -41,7 +61,7 @@
 
 
      @(rune-code-example
-	(my-mod-lang #:with-paren-runes? #t)
+	(rocks:my-mod-lang #:with-paren-runes? #t)
 	(forest-rock)
 	forest-rock-demo.mp4)
      }
@@ -54,7 +74,7 @@
      good luck after finding it at the edge of the entrance to the @b{Volcanic Underground.}
 
      @(rune-code-example
-	(my-mod-lang #:with-paren-runes? #t)
+	(rocks:my-mod-lang #:with-paren-runes? #t)
 	(black-rock)
 	black-rock-demo.mp4)
      }
@@ -68,7 +88,7 @@
      @b{Academy}.
 
      @(rune-code-example
-	(my-mod-lang #:with-paren-runes? #t)
+	(rocks:my-mod-lang #:with-paren-runes? #t)
 	(coal)
 	coal-demo.mp4)
      }
@@ -82,9 +102,20 @@
      trove of ancient books.
 
      @(rune-code-example
-	(my-mod-lang #:with-paren-runes? #t)
+	(rocks:my-mod-lang #:with-paren-runes? #t)
 	(metallic-rock)
 	metallic-rock-demo.mp4)
+     
+     If you really like this rock, combine it with @b{The Automata that Conjures} rune for an endless supply!
+     
+     @(rune-code-example
+         (append-rune-langs
+           #:name #f 
+           (rocks:my-mod-lang)
+           (spawners:my-mod-lang #:with-paren-runes? #t))
+         (spawner 
+           metallic-rock)
+         rock-spawner-demo.mp4) 
      }
      )
     (rune-lore
@@ -96,9 +127,24 @@
      at the base of his statue amidst @b{Seven Island Strongholds.}
 
      @(rune-code-example
-	(my-mod-lang #:with-paren-runes? #t)
+	(rocks:my-mod-lang #:with-paren-runes? #t)
 	(floor-mossed-stone)
 	floor-mossed-stone-demo.mp4)
+     
+     Combine with @b{The Automata that Conjures} rune to skip stones down by the pond!
+     
+     @(rune-code-example
+         (append-rune-langs
+           #:name #f 
+           (rocks:my-mod-lang)
+           (hierarchy:my-mod-lang)
+           (spawners:my-mod-lang)
+           (ice-particles:my-mod-lang #:with-paren-runes? #t))
+         (parentify 
+           ice-aura
+           (spawner
+             floor-mossed-stone))
+         frost-aura-spawner-demo.mp4) 
      }
      )
     )

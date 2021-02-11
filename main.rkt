@@ -9,36 +9,42 @@
 
 
 (define-classic-rune (gnarly-rock [version 1]) ;Note for docs: Only version = 1 works, but there are many rocks in the Mod that can be exposed as BPs
-  #:background "brown"
+  #:background "red"
   #:foreground (bitmap/url "https://static.thenounproject.com/png/1747907-200.png")
-  (spawn-mod-blueprint pak-folder mod-name (~a "GnarlyRock" version)))
+  (with-scale 6
+    (spawn-mod-blueprint pak-folder mod-name (~a "GnarlyRock" version))))
 
 (define-classic-rune (forest-rock [version 1]) ;Note for docs: Only version = 1 works, but there are many rocks in the Mod that can be exposed as BPs
-  #:background "brown"
+  #:background "red"
   #:foreground (bitmap/url "https://static.thenounproject.com/png/2614278-200.png")
-  (spawn-mod-blueprint pak-folder mod-name (~a "ForestRock" version)))
+  (with-scale 6
+    (spawn-mod-blueprint pak-folder mod-name (~a "ForestRock" version))))
 
 (define-classic-rune (black-rock [version 1]) ;Note for docs: Only version = 1 works, but there are many rocks in the Mod that can be exposed as BPs
-  #:background "brown"
+  #:background "red"
   #:foreground (bitmap/url "https://static.thenounproject.com/png/438784-200.png")
-  (spawn-mod-blueprint pak-folder mod-name (~a "BlackRock" version)))
+  (with-scale 6
+    (spawn-mod-blueprint pak-folder mod-name (~a "BlackRock" version))))
 
 (define-classic-rune (coal [version 1]) ;Note for docs: Only version = 1 works, but there are many rocks in the Mod that can be exposed as BPs
-  #:background "brown"
+  #:background "red"
   #:foreground (bitmap/url "https://static.thenounproject.com/png/16776-200.png")
-  (spawn-mod-blueprint pak-folder mod-name (~a "Coal" version)))
+  (with-scale 12
+    (spawn-mod-blueprint pak-folder mod-name (~a "Coal" version))))
 
 
 (define-classic-rune (metallic-rock [version 1]) ;Note for docs: Only version = 1 works, but there are many rocks in the Mod that can be exposed as BPs
-  #:background "brown"
+  #:background "red"
   #:foreground (bitmap/url "https://static.thenounproject.com/png/746834-200.png")
   ;Metalic is mispelled in the Unreal project
-  (spawn-mod-blueprint pak-folder mod-name (~a "MetalicSmallRock" version)))
+  (with-scale 18
+    (spawn-mod-blueprint pak-folder mod-name (~a "MetalicSmallRock" version))))
 
 (define-classic-rune (floor-mossed-stone [version 1]) ;Note for docs: Only version = 1 works, but there are many rocks in the Mod that can be exposed as BPs
-  #:background "brown"
+  #:background "red"
   #:foreground (bitmap/url "https://static.thenounproject.com/png/438790-200.png") 
-  (spawn-mod-blueprint pak-folder mod-name (~a "FloorMossedStone" version)))
+  (with-scale 2
+    (spawn-mod-blueprint pak-folder mod-name (~a "FloorMossedStone" version))))
 
 (define-classic-rune-lang my-mod-lang #:eval-from main.rkt
   (gnarly-rock forest-rock black-rock coal

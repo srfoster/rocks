@@ -3,6 +3,7 @@
 (require rocks/mod-info)
 (require 2htdp/image)
 
+
 ;TODO: Make a better rune.  Maybe need a general solution for
 ;  a rune that wraps up a bunch of assets...
 ;TODO: Many more rocks to add in the HugeRocksPack asset pack
@@ -57,6 +58,6 @@
 
 
   (once-upon-a-time
-   #:world (arena-world) ;(demo-world)
+   #:world (demo-world) ;(demo-world)
    #:aether (demo-aether
              #:lang (my-mod-lang #:with-paren-runes? #t))))
